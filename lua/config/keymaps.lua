@@ -7,6 +7,7 @@ local default_opts = {noremap = true, silent = true}
 map('n', 's', '<Plug>(easymotion-s)', {})
 
 map('n', '<leader>a', '<C-w>w', {})                   -- next window
+map('n', '<leader>b', ':buffers<cr>', {})             -- show buffers
 map('n', '<leader>h', ':nohlsearch<cr>', {})  -- no search highlighting
 map('n', '<leader>n', ':bnext<cr>', {})               -- next buffer
 map('n', '<leader>q', ':q<cr>', {})                   -- quit buffer

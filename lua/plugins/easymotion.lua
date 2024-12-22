@@ -1,4 +1,4 @@
 return {
-    "easymotion/vim-easymotion"
+  "easymotion/vim-easymotion"
 }
 -- leader key on `lua/config/keymaps.lua`

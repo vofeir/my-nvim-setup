@@ -1,10 +1,15 @@
 local opt = vim.o
 
+opt.termguicolors = true -- permite colores hex
 opt.expandtab = true
 opt.linebreak = true
 opt.number = true
 opt.shiftwidth = 4
 opt.softtabstop = 4
+
+-- Margen derecho:
+opt.colorcolumn = "80"
+vim.api.nvim_set_hl(0, 'ColorColumn', { bg = '#151515' })
 
 -- gitsigns plugin colors
 --   verde para adiciones:

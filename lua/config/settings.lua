@@ -9,7 +9,7 @@ opt.softtabstop = 4
 
 -- Margen derecho:
 opt.colorcolumn = "80"
-vim.api.nvim_set_hl(0, 'ColorColumn', { bg = '#151515' })
+vim.api.nvim_set_hl(0, 'ColorColumn', { bg = '#070712' })
 
 -- gitsigns plugin colors
 --   verde para adiciones:

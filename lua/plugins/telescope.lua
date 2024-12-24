@@ -25,14 +25,14 @@ return {
   end,
   keys = {
     {
-      "<leader>pp",
+      "<leader>gf",
       function()
         require('telescope.builtin').git_files({ show_untracked = true })
       end,
       desc = "Telescope Git Files",
     },
     {
-      "<leader>pe",
+      "<leader>tb",
       function()
         require("telescope.builtin").buffers()
       end,
@@ -79,7 +79,7 @@ return {
       end
     },
     {
-      "<leader>pf",
+      "<leader>tf",
       function()
         require('telescope.builtin').find_files()
       end,
@@ -98,6 +98,13 @@ return {
         require("telescope").extensions.file_browser.file_browser({ path = "%:h:p", select_buffer = true })
       end,
       desc = "Telescope file browser"
+    },
+    {
+      "<leader>m",
+      function ()
+        require("telescope.builtin").keymaps()
+      end,
+      desc = "Telescope keymaps"
     }
   },
 }

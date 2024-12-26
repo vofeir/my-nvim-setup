@@ -6,6 +6,8 @@ local default_opts = {noremap = true, silent = true}
 -- Leader key for easymotion:
 map('n', 's', '<Plug>(easymotion-s)', {})
 
+map('n', '<leader>R', ':registers<CR>', { desc = "Display registers" })
+
 map('n', '<leader>a', '<C-w>w', { desc = "Next window" })
 map('n', '<leader>b', ':buffers<cr>', { desc = "Show buffers" })
 map('n', '<leader>h', ':nohlsearch<cr>', { desc = "No search highlighting" })

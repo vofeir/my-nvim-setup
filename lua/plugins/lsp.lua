@@ -41,5 +41,8 @@ return {
         }
       }
     })
+    require("lspconfig").phpactor.setup({})
+    require("lspconfig").html.setup({})
+    require("lspconfig").ts_ls.setup({})
   end
 }

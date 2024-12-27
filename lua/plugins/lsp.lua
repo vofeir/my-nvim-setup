@@ -3,6 +3,7 @@ return {
   dependencies = {
     "williamboman/mason.nvim",
     "folke/neodev.nvim",
+    "hrsh7th/nvim-cmp",
   },
   config = function()
     vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
@@ -41,8 +42,25 @@ return {
         }
       }
     })
-    require("lspconfig").phpactor.setup({})
+    require'cmp'.setup {
+      sources = {
+        { name = 'nvim_lsp' }
+      }
+    }
+    local capabilities = require('cmp_nvim_lsp').default_capabilities()
+    require('lspconfig').clangd.setup {
+      capabilities = capabilities,
+    }
     require("lspconfig").html.setup({})
     require("lspconfig").ts_ls.setup({})
+    require("lspconfig").intelephense.setup({
+      settings = {
+        intelephense = {
+          files = {
+            maxSize = 5000000; -- Tamaño máximo del archivo
+          }
+        }
+      }
+    })
   end
 }

@@ -35,3 +35,6 @@ map('v', '<', '<gv', { desc = "after tab out re-select the same"})
 -- Keep search in middle screen:
 map('n', 'n', 'nzzzv', { desc = "Next seach and cursor in middle"})
 map('n', 'N', 'Nzzzv', { desc = "Prev seach and cursor in middle"})
+
+-- Oil.nvim:
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
